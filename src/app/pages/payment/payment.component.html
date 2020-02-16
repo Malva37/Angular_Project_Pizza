@@ -1,0 +1,51 @@
+<div class="container">
+  <input type="text" [(ngModel)]="searchName" name="searchName" class="form-control"> 
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">First</th>
+        <th scope="col">Last</th>
+        <th scope="col">Handle</th>
+        <th scope="col">Handle</th>
+        <th scope="col">Handle</th>
+        <th scope="col">Handle</th>
+        <th scope="col">Handle</th>
+        <th scope="col">Handle</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let data of arrData | search:searchName; let i=index">
+          <td>{{ i+1 }}</td>
+          <td>{{ data.firstName | uppercase }}</td>
+          <td>{{ data.lastName | lowercase }}</td>
+          <td>{{ data.city | titlecase }}</td>
+          <td>{{ data.dateOfRegister | date:'d.MM.y HH:mm:ss' }}</td>
+          <td>{{ data.company }}</td>
+          <td>{{ data.salary | hryvnia:'$' }}</td>
+          <td>{{ data.position }}</td>
+          <td>{{ data.about | slice:0:30 }}...</td>
+      </tr>
+      <!--  {{ value | pipes }}    -->
+      <!-- upperCasePipe, lowerCase, titleCase, date, slice, decimal, currency -->
+      <!-- {{ variable | slice:start:end }} -->
+      <!-- {{ variable | date:'short' }} -->
+      <!-- {{ variable | date:'medium' }} -->
+      <!-- {{ variable | date:'long' }} -->
+      <!-- {{ variable | date:'full' }} -->
+      <!-- {{ variable | date:'shortDate' }} -->
+      <!-- {{ variable | date:'mediumDate' }} -->
+      <!-- {{ variable | date:'longDate' }} -->
+      <!-- {{ variable | date:'fullDate' }} -->
+      <!-- {{ variable | date:'shortTime' }} -->
+      <!-- {{ variable | date:'mediumTime' }} -->
+      <!-- {{ variable | date:'longTime' }} -->
+      <!-- {{ variable | date:'fullTime' }} -->
+      <!-- {{ variable | date:'d.MM.y ' }} -->
+      <!-- {{ variable | date:'d.MM.y HH:mm:ss' }} -->
+      <!-- {{ variable | date:'d.MM.y HH:mm:ss' }} -->
+      <!-- {{ variable | currency:'UAH':'symbol-narrow':'1.2-2' }} -->
+      <!-- {{ variable | number:'minInt.minFrac-maxFrac' }} -->
+    </tbody>
+  </table>
+</div>

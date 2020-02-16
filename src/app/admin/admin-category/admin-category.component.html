@@ -1,0 +1,64 @@
+<div class="container">
+    <div class="alert alert-secondary btn-toolbar justify-content-between" role="alert">
+      <h6>Category</h6>
+      <button type="button" class="btn btn-secondary btn-sm" (click)="openModal(template)">Add</button>
+    </div>
+  
+    <ng-template #template>
+      <div class="modal-header">
+        <h4 class="modal-title pull-left">Modal title</h4>
+        <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="form-group">
+          <input type="text"  [(ngModel)]='newCategory' name="newCategory" placeholder="name here ..."
+            class="form-control">
+        </div>
+        <div class="float-sm-right">
+          <button type="button" class="btn btn-secondary" aria-label="Close" (click)="modalRef.hide()">Close</button>
+          <button type="button" class="btn btn-secondary" (click)="addCategory()" [disabled]="!newCategory">Add</button>
+        </div>
+      </div>
+    </ng-template>
+  
+  
+    <ng-template #templateDelete>
+      <div class="modal-header justify-content-around">
+          <button type="button" class="btn btn-secondary" aria-label="Close" (click)="modalRef.hide()">Dismiss</button>
+          <button type="button" class="btn btn-danger"  (click)="deleteCategory()">Delete</button>
+      </div>
+    </ng-template>
+  
+  
+
+    <div class='container'>
+      <input type="text" [(ngModel)]="searchName" name="searchName" placeholder="filter category ..."
+        class="form-control">
+        <hr>
+      <table class="table">
+        <thead>
+          <tr class="table-dark">
+            <th scope="col">#</th>
+            <th scope="col">Name</th>
+            <th scope="col">Edit</th>
+            <th scope="col">Delete</th>
+          </tr>
+        </thead>
+        <tbody class=" table-bordered">
+          <tr *ngFor="let item of adminCategories | searchCategory:searchName;let i = index">
+            <td> {{ i+1 }} </td>
+            <td> {{ item.nameCategory }} </td>
+            <td>
+              <input type="button" value='Edit' (click)="editCategory(item, template)" class="btn btn-light border-dark">
+            </td>
+            <td>
+              <input type="button" value='Delete' (click)="openModalDel(templateDelete,item)" class="btn btn-secondary">
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+ 
+  

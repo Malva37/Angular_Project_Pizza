@@ -1,0 +1,17 @@
+<div class="container-fluid">
+  <div class="row mt-2">
+    <div class="col-3">
+        <div class="nav flex-column  navbar-expand-lg navbar-light " id="v-pills-tab" role="tablist" aria-orientation="vertical">
+          <!-- <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical"> -->
+          <a class="nav-link" [routerLink]="[ 'category' ]" routerLinkActive="active">Category</a>
+          <a class="nav-link" [routerLink]="[ 'products' ]" routerLinkActive="active">Products</a>
+          <a class="nav-link" [routerLink]="[ 'orders' ]" routerLinkActive="active">Orders</a>
+      </div>
+    </div>
+    <div class="col-9">
+      <div class="tab-content">
+        <router-outlet></router-outlet>
+      </div>
+    </div>
+  </div>
+</div>

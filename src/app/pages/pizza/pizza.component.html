@@ -1,0 +1,14 @@
+<div class="conteiner">
+    <div class="row">
+        <div class="card col-3 mt-2" *ngFor="let pr of products">
+            <img src="https://www.lapiec-pizza.com.ua/wp-content/uploads/2018/07/Flamingo-1.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">{{pr.name}}</h5>
+              <p class="card-text">{{pr.description}}</p>
+              <h3 class="text-danger">{{pr.price}} грн</h3>
+
+              <a [routerLink]="[ '/product', pr.id ]" class="btn btn-primary">More details</a>
+            </div>
+          </div>
+    </div>
+</div>

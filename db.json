@@ -1,0 +1,54 @@
+{
+  "products": [
+    {
+      "id": 2,
+      "categoryID": 2,
+      "categoryName": "drinks",
+      "name": "cola",
+      "description": ",h,h,h",
+      "price": 30,
+      "image": "https://firebasestorage.googleapis.com/v0/b/frontenders-82033.appspot.com/o/images%2F51352891-8a1f-46c9-a316-ab6c5586d8b9.jpeg?alt=media&token=a5221818-86f5-4530-a36d-49a3eeebe27c"
+    },
+    {
+      "id": 3,
+      "categoryID": 3,
+      "categoryName": "salad",
+      "name": "Інсалата ді Сальмоне",
+      "description": "рукола, помідор чері, огірок, салат айсберг, соус айолі, пармезан, лосось, перепелине яйце, кунжут. 285 г",
+      "price": 134,
+      "image": "https://firebasestorage.googleapis.com/v0/b/frontenders-82033.appspot.com/o/images%2Fa947d3ab-c249-41c2-8f02-82d4373e19ea.jpeg?alt=media&token=fba8efd0-de80-422b-aad6-936d3833c017"
+    },
+    {
+      "id": 4,
+      "categoryID": 3,
+      "categoryName": "salad",
+      "name": "Інсалата ді Прошуто",
+      "description": "Салат айcберг, прошуто, сир пармезан, помідори, рукола та бальзамічна заправка. 135 г",
+      "price": 115,
+      "image": "https://firebasestorage.googleapis.com/v0/b/frontenders-82033.appspot.com/o/images%2F7563cb24-6334-42e5-b420-42a4d9ebd4ef.jpeg?alt=media&token=f745e5f9-028a-418b-8ba1-0ece12316dc1"
+    },
+    {
+      "id": 5,
+      "categoryID": 1,
+      "categoryName": "pizza",
+      "name": "Кватро формаджі",
+      "description": "соус вершковий, пармезан, сир моцарела, сир рікотта, сир дор блю,  волоський горіх, груша.",
+      "price": 142,
+      "image": "https://firebasestorage.googleapis.com/v0/b/frontenders-82033.appspot.com/o/images%2Fdda2e83b-f4b1-4f2f-b1ce-4caf0b5e0e80.jpeg?alt=media&token=31aa9a84-8a10-4cc5-b3dd-31798c2ea675"
+    }
+  ],
+  "categories": [
+    {
+      "id": 1,
+      "nameCategory": "pizza"
+    },
+    {
+      "id": 3,
+      "nameCategory": "drinks"
+    },
+    {
+      "id": 4,
+      "nameCategory": "salad"
+    }
+  ]
+}
